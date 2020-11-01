@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   get '/candidates/zip/:zip', to: 'candidates#by_zip'
   get '/officials/zip/:zip5/:zip4', to: 'officials#by_zip_full'
   get '/officials/zip/:zip5', to: 'officials#by_zip'
+  get '/elections/zip/:zip5', to: 'elections#by_zip'
   get '/votes/:year/:stateid', to: 'votes#vote_categories'
 end
