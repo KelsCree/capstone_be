@@ -11,12 +11,7 @@ class OfficialsController < ApplicationController
   end
 
   def by_zip_full
-    @officials = VoteSmart::Official.get_by_zip params[:zip5], params[:zip4]
-    render json: @officials
-  end
-
-  def by_zip_9dig
-    @officials = VoteSmart::Official.get_by_zip params[:zip5], params[:zip4]
+    @officials = VoteSmart::Official.get_by_zip params[:zip5], nil, params[:zip4], nil
     render json: @officials
   end
 
