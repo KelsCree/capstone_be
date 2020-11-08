@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cand_id: MyString
+  user: one
+
+two:
+  cand_id: MyString
+  user: two
