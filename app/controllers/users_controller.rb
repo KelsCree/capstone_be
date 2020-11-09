@@ -2,12 +2,12 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
-    render json: @users
+    render json: @users, include: [:liked_candidates, :disliked_candidates]
   end
 
   def show
     @user = User.find(params[:id])
-    render json: @user, include: [:liked_politicians, :disliked_politicians]
+    render json: @user, include: [:liked_candidates, :disliked_candidates]
   end
 
   def create

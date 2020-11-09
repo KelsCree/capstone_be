@@ -13,4 +13,5 @@ Rails.application.routes.draw do
   get '/officials/zip/:zip5', to: 'officials#by_zip'
   get '/elections/zip/:zip5', to: 'elections#by_zip'
   get '/votes/:year/:stateid', to: 'votes#vote_categories'
+  post '/login', to: 'application#login'
 end
